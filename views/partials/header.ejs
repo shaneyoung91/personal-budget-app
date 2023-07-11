@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <nav>
+      <a href="/" <%- title === 'Home' ? 'class="active"' : '' %>>HOME</a>
+      &nbsp;
+      <% if (user) { %>
+        <a href="/budgets" <%- title === 'Budgets' ? 'class="active"' : '' %>>BUDGETS</a>
+        &nbsp;
+        <a href="/categories"	<%- title === 'Categories' ? 'class="active"' : '' %>>
+        CATEGORIES</a>
+        &nbsp;
+        <a href="/logout">LOG OUT</a>
+        &nbsp;
+      <% } else { %>
+        <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"></a>
+      <% } %>
+    </nav>
