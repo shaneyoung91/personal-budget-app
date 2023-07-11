@@ -8,17 +8,19 @@
     <title><%= title %></title>
   </head>
   <body>
-    <div class="sidebar">
+    <nav align="center">
       <a class="active" href="/" <%- title === 'Home' ? 'class="active"' : '' %>>Home</a>
       &nbsp;
     <% if (user) { %>
-      <a href="/budgets" <%- title === 'Budgets' ? 'class="active"' : '' %>>Budgets</a>
+      <a href="/budgets"  <%- title === 'Budgets' ? 'class="active"' : '' %>>Budgets</a>
       &nbsp;
-      <a href="/categories" <%- title === 'Categories' ? 'class="active"' : '' %>>Categories</a>
+      <a href="/categories" method="GET" <%- title === 'Categories' ? 'class="active"' : '' %>>Categories</a>
       &nbsp;
       <a href="/logout">Log Out</a>
       &nbsp;
-    </div>
+    </nav>
     <% } else { %>
       <a href="/auth/google" id="login"><img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"></a>
     <% } %>
+    <h2><%= title %></h2>
+    <br>

@@ -1,0 +1,29 @@
+<%- include('../partials/header') %>
+
+<h3>All Categories - [Month / Year]</h3>
+<form action="/categories/new" method="GET">
+  <button type="submit">Add New Category</button>
+</form>
+<br>
+<table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Amount</th>
+        <th>Note</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% categories.forEach(function(c) { %>
+            <tr>
+              <td><%= c.name %></td>
+              <td><%= c.date %></td>
+              <td>$<%= c.amount %></td>
+              <td><%= c.note %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+
+<%- include('../partials/footer') %>

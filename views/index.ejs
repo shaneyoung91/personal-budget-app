@@ -1,5 +1,7 @@
 <%- include('./partials/header') %>
 
-<h2>My Money, My Problems</h2>
+<% if (user) { %>
+<h3 align="center">Welcome <%=user.name%>!</h3>
+<% } %>
 
 <%- include('./partials/footer') %>
