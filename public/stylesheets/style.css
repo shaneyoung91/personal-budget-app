@@ -12,6 +12,11 @@ a {
   width: 50px;
 }
 
+img {
+  height: 28px;
+  width: 28px;
+}
+
 nav {
   font-size: 18px;
 }
