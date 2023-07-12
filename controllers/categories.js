@@ -38,9 +38,10 @@ async function deleteCategory(req, res) {
 }
 
 async function create(req, res) {
+    const budgetId = req.params.id
+    req.body.budget = budgetId
     try{
-        const budgetId = req.params.id
-        await Category.create(req.body)
+        const category = await Category.create(req.body)
         res.redirect(`/budgets/${budgetId}/categories`)
     } catch (err) {
         res.render('categories/new', {title: 'My Money, My Problems', errorMsg: err.message})
