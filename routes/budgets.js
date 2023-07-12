@@ -9,4 +9,7 @@ router.get('/budgets', ensureLoggedIn, budgetsCtrl.index);
 // GET /budgets/new
 router.get('/budgets/new', ensureLoggedIn, budgetsCtrl.new);
 
+// POST /budgets
+router.post('/budgets', ensureLoggedIn, budgetsCtrl.create);
+
 module.exports = router;

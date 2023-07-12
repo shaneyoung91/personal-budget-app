@@ -1,4 +1,5 @@
 const Category = require('../models/category');
+const Budget = require('../models/budget')
 
 module.exports = {
     index,

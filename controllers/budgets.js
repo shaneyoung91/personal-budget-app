@@ -5,7 +5,21 @@ const User = require('../models/user');
 
 module.exports = {
     index,
-    new: newBudget
+    new: newBudget,
+    create,
+}
+
+async function create(req, res) {
+    try {
+        const budgetData = {
+            ...req.body,
+            user: req.user._id
+        }
+        const budget = await Budget.create(budgetData)
+        res.redirect('/budgets')
+    } catch(err) {
+        res.render('budgets/new', {title: 'My Money, My Problems', errorMsg: err.message})
+    }
 }
 
 async function newBudget(req, res) {

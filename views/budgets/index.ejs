@@ -1,24 +1,17 @@
 <%- include('../partials/header') %>
 
-<h3>Current Budget - [Month / Year]</h3>
+<h3>All Budgets</h3>
 <form action="/budgets/new" method="GET">
   <button type="submit">Create New Budget</button>
 </form>
 <br>
-<table>
-    <thead>
-      <tr>
-        <th>Category</th>
-        <th></th>
-        <th>Amount</th>
-        <th></th>
-        <th>% of Income</th>
-      </tr>
-    </thead>
-    <tbody>
-        
-        </tbody>
-      </table>
 
+    <ul>
+      <% budgets.forEach(function(b) { %>
+        <li>
+          <td><a href="/budgets/<%= b._id %>"><%= b.month %> <%= b.year %></td>
+        </li>
+        <% }) %>
+    </ul>
 
 <%- include('../partials/footer') %>
