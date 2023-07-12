@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
-<h3>All Categories - [Month / Year]</h3>
-<form action="/categories/new" method="GET">
+<h3>All Categories</h3>
+<form action="/budgets/<%= b._id %>/categories/new" method="GET">
   <button type="submit">Add New Category</button>
 </form>
 <br>
@@ -17,19 +17,19 @@
       </tr>
     </thead>
     <tbody>
-        <% categories.forEach(function(c) { %>
+        <% budget.categories.forEach(function(c) { %>
             <tr>
               <td><%= c.name %></td>
               <td><%= c.date %></td>
               <td>$<%= c.amount %></td>
               <td><%= c.note %></td>
               <td>
-                <form action="/categories/<%= c._id %>/edit" method="GET">
+                <form action="/budgets/<%= b._id %>/categories/<%= c._id %>/edit" method="GET">
                   <button type="submit"><img src="https://pixsector.com/cache/c5433603/av741f3e5fd1c88304cf8.png"></button>
                 </form>
               </td>
               <td>
-                <form action="/categories/<%= c._id%>?_method=DELETE" method="POST">
+                <form action="/budgets/<%= b._id %>/categories/<%= c._id%>?_method=DELETE" method="POST">
                   <button type="submit"><img src="https://www.iconpacks.net/icons/1/free-trash-icon-347-thumb.png"></button>
                 </form>
               </td>

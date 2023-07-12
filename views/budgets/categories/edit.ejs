@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
 <h3><%= category.name %></h3>
-<form action="/categories/<%= category.id %>?_method=PUT" method="POST">
+<form action="/budgets/<%= b._id %>/categories/<%= category._id %>?_method=PUT" method="POST">
     <label>Transaction Date:
         <input type="date" name="date" value="<%= category.date%>">
     </label><br><br>
