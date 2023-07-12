@@ -4,7 +4,12 @@ const User = require('../models/user');
 
 
 module.exports = {
-    index
+    index,
+    new: newBudget
+}
+
+async function newBudget(req, res) {
+    res.render('budgets/new', {title: 'My Money, My Problems', errorMsg: ''})
 }
 
 async function index(req, res) {
