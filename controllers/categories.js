@@ -39,18 +39,23 @@ async function deleteCategory(req, res) {
 
 async function create(req, res) {
     try{
+        const budgetId = req.params.id
         await Category.create(req.body)
-        res.redirect('/categories')
+        res.redirect(`/budgets/${budgetId}/categories`)
     } catch (err) {
         res.render('categories/new', {title: 'My Money, My Problems', errorMsg: err.message})
     }
 }
 
 async function newCategory(req, res) {
-    res.render('categories/new', {title: 'My Money, My Problems', errorMsg: ''})
+    const budgetId = req.params.id
+    const budget = await Budget.findById(budgetId)
+    res.render('categories/new', {title: 'My Money, My Problems', errorMsg: '', budgetId: budgetId, budget: budget})
 }
 
 async function index(req, res) {
+    const budgetId = req.params.id
+    const budget = await Budget.findById(budgetId)
     const categories = await Category.find({}).sort({date: 1});
-    res.render('categories/index', {title: 'My Money, My Problems', categories})
+    res.render('categories/index', {title: 'My Money, My Problems', categories, budgetId: budgetId})
 }

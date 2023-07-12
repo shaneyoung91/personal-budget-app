@@ -19,7 +19,13 @@ const categorySchema = new Schema({
     },
     note: {
         type: String
-    }
+    }, 
+    // Reference Category Schema
+    budget: {
+        type: Schema.Types.ObjectId,
+        ref: 'Budget',
+    },
+    
 });
 
 module.exports = mongoose.model('Category', categorySchema)

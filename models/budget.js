@@ -13,11 +13,6 @@ const budgetSchema = new Schema({
         required: true,
         enum: ['2023', '2024', '2025', '2026', '2027', '2028', '2029', '2030']
     },
-    // Reference Category Schema
-    category: {
-        type: Schema.Types.ObjectId,
-        ref: 'Category',
-    },
     // Reference User Schema
     user: {
         type: Schema.Types.ObjectId,

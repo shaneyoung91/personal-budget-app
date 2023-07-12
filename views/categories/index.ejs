@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
-<h3>All Categories - [Month / Year]</h3>
-<form action="/categories/new" method="GET">
+<h3>All Categories</h3>
+<form action="/budgets/<%= budgetId %>/categories/new" method="GET">
   <button type="submit">Add New Category</button>
 </form>
 <br>

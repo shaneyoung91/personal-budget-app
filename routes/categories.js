@@ -4,10 +4,10 @@ const categoriesCtrl = require('../controllers/categories');
 const ensureLoggedIn = require('../config/ensureLoggedIn.js');
 
 // GET /categories
-router.get('/categories', categoriesCtrl.index);
+router.get('/budgets/:id/categories', categoriesCtrl.index);
 
 // GET /categories/new
-router.get('/categories/new', ensureLoggedIn, categoriesCtrl.new);
+router.get('/budgets/:id/categories/new', ensureLoggedIn, categoriesCtrl.new);
 
 // DELETE /categories/:id
 router.delete('/categories/:id', ensureLoggedIn, categoriesCtrl.delete)
@@ -16,7 +16,7 @@ router.delete('/categories/:id', ensureLoggedIn, categoriesCtrl.delete)
 router.put('/categories/:id', ensureLoggedIn, categoriesCtrl.update)
 
 // POST /categories
-router.post('/categories', ensureLoggedIn, categoriesCtrl.create);
+router.post('/budgets/:id/categories', ensureLoggedIn, categoriesCtrl.create);
 
 // GET /categories/:id/edit
 router.get('/categories/:id/edit', ensureLoggedIn, categoriesCtrl.edit)
