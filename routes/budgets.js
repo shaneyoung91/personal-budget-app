@@ -4,7 +4,7 @@ const budgetsCtrl = require('../controllers/budgets');
 const ensureLoggedIn = require('../config/ensureLoggedIn.js');
 
 // GET /budgets
-router.get('/budgets', budgetsCtrl.index);
+router.get('/budgets', ensureLoggedIn, budgetsCtrl.index);
 
 // GET /budgets/new
 router.get('/budgets/new', ensureLoggedIn, budgetsCtrl.new);
@@ -13,6 +13,6 @@ router.get('/budgets/new', ensureLoggedIn, budgetsCtrl.new);
 router.post('/budgets', ensureLoggedIn, budgetsCtrl.create);
 
 // GET /budgets/:id
-router.get('/budgets/:id', budgetsCtrl.show)
+router.get('/budgets/:id', ensureLoggedIn, budgetsCtrl.show)
 
 module.exports = router;

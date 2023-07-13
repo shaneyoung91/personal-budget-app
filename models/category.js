@@ -7,7 +7,7 @@ const categorySchema = new Schema({
         required: true,
         enum: ['Income', 'Rent/Mortgage', 'Utilities', 'Groceries', 'Eating Out/Restaurants', 
         'Transportation/Gas', 'Phone', 'Streaming Services', 'Insurance', 'Student Loan', 
-        'Car Loan', 'Credit Card', 'Other', 'Savings']
+        'Car Loan', 'Credit Card', 'Memberships', 'Other', 'Savings']
     },
     date: {
         type: Date,
@@ -21,7 +21,8 @@ const categorySchema = new Schema({
         required: true
     },
     note: {
-        type: String
+        type: String,
+        required: true
     }, 
     // Reference Category Schema
     budget: {

@@ -4,7 +4,7 @@ const categoriesCtrl = require('../controllers/categories');
 const ensureLoggedIn = require('../config/ensureLoggedIn.js');
 
 // GET /categories
-router.get('/budgets/:id/categories', categoriesCtrl.index);
+router.get('/budgets/:id/categories', ensureLoggedIn, categoriesCtrl.index);
 
 // GET /categories/new
 router.get('/budgets/:id/categories/new', ensureLoggedIn, categoriesCtrl.new);
