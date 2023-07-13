@@ -1,10 +1,6 @@
 <%- include('../partials/header') %>
 
-<h3>All Budgets</h3>
-<form action="/budgets/new" method="GET">
-  <button type="submit">Create New Budget</button>
-</form>
-<br>
+<h3>My Budgets</h3>
 
     <ul>
       <% budgets.forEach(function(b) { %>
@@ -13,5 +9,11 @@
         </li>
         <% }) %>
     </ul>
+
+    <br>
+    <form action="/budgets/new" method="GET">
+      <button type="submit">Create New Budget</button>
+    </form>
+    <br>
 
 <%- include('../partials/footer') %>

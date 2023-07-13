@@ -15,9 +15,15 @@
     <tbody>
         <% category.forEach(function(c) { %>
             <tr>
-                <td><%= c.name%></td>
+            <% if(c.name === "Income") { %>
+                <td style="color: rgb(65, 192, 65)"><%= c.name %></td>
+                <td></td>   
+                <td style="color: rgb(65, 192, 65)"><%= c.amount %></td>   
+                <% } else { %>
+                <td style="color: red"><%= c.name%></td>
                 <td></td>
-                <td><%= c.amount %></td>
+                <td style="color: red"><%= c.amount %></td>
+                <% } %>
                 <td></td>
                 <td>____%</td>
             </tr>
