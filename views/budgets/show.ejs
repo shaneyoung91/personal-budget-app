@@ -26,11 +26,18 @@
                 <td>____%</td>
             </tr>
             <% }}) %>
+            <% let totalIncome = 0 %>
+            <% let totalExpenses = 0 %>
+            <% let totalSavings = 0 %>
+            <% category.forEach(function(c) { %>
             <tr class="total">
-            <td style="border-top: 4px solid black;">TOTAL INCOME</td>
-            <td style="border-top: 4px solid black;">$....</td>
-            <td style="border-top: 4px solid black;">$....</td>
-            <td style="border-top: 4px solid black;">....</td>
+                <% if(c.name === "Income") { %>
+                    <% totalIncome += c.amount; %>
+                    <% }}) %>
+                <td style="border-top: 4px solid black;">TOTAL INCOME</td>
+                <td style="border-top: 4px solid black;">$....</td>
+                <td style="border-top: 4px solid black;">$<%= totalIncome %></td>
+                <td style="border-top: 4px solid black;">....</td>
             </tr>
             <tr></tr>
             <tr></tr>
@@ -48,11 +55,15 @@
                 <td>____%</td>
             </tr>
             <% }}) %>
-            <tr class="total">
-                <td style="border-top: 4px solid black;">TOTAL EXPENSES</td>
-                <td style="border-top: 4px solid black;">$....</td>
-                <td style="border-top: 4px solid black;">$....</td>
-                <td style="border-top: 4px solid black;">....</td>
+            <% category.forEach(function(c) { %>
+                <tr class="total">
+                    <% if(c.name !== "Income" & c.name !== "Savings") { %>
+                        <% totalExpenses += c.amount; %>
+                        <% }}) %>
+                    <td style="border-top: 4px solid black;">TOTAL EXPENSES</td>
+                    <td style="border-top: 4px solid black;">$....</td>
+                    <td style="border-top: 4px solid black;">$<%= totalExpenses %></td>
+                    <td style="border-top: 4px solid black;">....</td>
             </tr>
         <tr></tr>
         <tr></tr>
@@ -65,11 +76,15 @@
                 <td>____%</td>
             </tr>
             <% }}) %>
-            <tr class="total">
-            <td style="border-top: 4px solid black;">TOTAL SAVINGS</td>
-            <td style="border-top: 4px solid black;">$....</td>
-            <td style="border-top: 4px solid black;">$....</td>
-            <td style="border-top: 4px solid black;">....</td>
+            <% category.forEach(function(c) { %>
+                <tr class="total">
+                    <% if(c.name === "Savings") { %>
+                        <% totalSavings += c.amount; %>
+                        <% }}) %>
+                <td style="border-top: 4px solid black;">TOTAL SAVINGS</td>
+                <td style="border-top: 4px solid black;">$....</td>
+                <td style="border-top: 4px solid black;">$<%= totalSavings %></td>
+                <td style="border-top: 4px solid black;">....</td>
         </tr>
         <tr></tr>
         <tr></tr>

@@ -5,7 +5,7 @@
   <button type="submit">Add New Category</button>
 </form>
 <br>
-<table>
+<table id="categories-table">
     <thead>
       <tr>
         <th>Name</th>
@@ -20,7 +20,7 @@
         <% categories.forEach(function(c) { %>
             <tr>
               <td><%= c.name %></td>
-              <td><%= c.date %></td>
+              <td><%= c.date.toDateString() %></td>
               <td>$<%= c.amount %></td>
               <td><%= c.note %></td>
               <td>
