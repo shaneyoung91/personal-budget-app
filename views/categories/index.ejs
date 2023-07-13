@@ -14,7 +14,8 @@
       <tr>
         <th>Name</th>
         <th>Date</th>
-        <th>Amount</th>
+        <th>Budget Amount</th>
+        <th>Actual Amount</th>
         <th>Note</th>
         <th>Edit</th>
         <th>Delete</th>
@@ -24,8 +25,9 @@
         <% categories.forEach(function(c) { %>
             <tr>
               <td><%= c.name %></td>
-              <td><%= c.date.toISOString().split('T')[0] %></td>
-              <td>$<%= c.amount %></td>
+              <td><%= c.date %></td>
+              <td>$<%= c.budgetAmt %></td>
+              <td>$<%= c.actualAmt %></td>
               <td><%= c.note %></td>
               <td>
                 <form action="/budgets/<%= budgetId %>/categories/<%= c._id %>/edit" method="GET">

@@ -6,8 +6,9 @@
     <thead>
     <tr>
         <th>Category</th>
-        <th>Expected Amount</th>
-        <th>Actual Amount</th>
+        <th>Note</th>
+        <th>Budget</th>
+        <th>Actual</th>
         <th>% of Income</th>
     </tr>
     </thead>
@@ -16,8 +17,9 @@
             <tr class="income">
             <% if(c.name === "Income") { %>
                 <td><%= c.name %></td>
-                <td>$....</td> 
-                <td>$<%= c.amount %></td>   
+                <td><%= c.note %></td>
+                <td>$<%= c.budgetAmt %></td>
+                <td>$<%= c.actualAmt %></td>  
                 <td>____%</td>
             </tr>
             <% }}) %>
@@ -26,10 +28,11 @@
             <% let totalSavings = 0 %>
             <% category.forEach(function(c) { %>
                 <% if(c.name === "Income") { %>
-                    <% totalIncome += c.amount; %>
+                    <% totalIncome += c.actualAmt; %>
                     <% }}) %>
             <tr class="total">
                 <td style="border-top: 4px solid black;">TOTAL INCOME</td>
+                <td style="border-top: 4px solid black;"></td>
                 <td style="border-top: 4px solid black;">$....</td>
                 <td style="border-top: 4px solid black;">$<%= totalIncome %></td>
                 <td style="border-top: 4px solid black;">....</td>
@@ -45,17 +48,19 @@
             <% if(c.name !== "Income" & c.name !== "Savings") { %>
             <tr class="expenses">    
                 <td><%= c.name %></td>
-                <td>$....</td> 
-                <td>$<%= c.amount %></td>   
+                <td><%= c.note %></td>
+                <td>$<%= c.budgetAmt %></td>
+                <td>$<%= c.actualAmt %></td>  
                 <td>____%</td>
             </tr>
             <% }}) %>
             <% category.forEach(function(c) { %>
                     <% if(c.name !== "Income" & c.name !== "Savings") { %>
-                        <% totalExpenses += c.amount; %>
+                        <% totalExpenses += c.actualAmt; %>
                         <% }}) %>
             <tr class="total">
                 <td style="border-top: 4px solid black;">TOTAL EXPENSES</td>
+                <td style="border-top: 4px solid black;"></td>
                 <td style="border-top: 4px solid black;">$....</td>
                 <td style="border-top: 4px solid black;">$<%= totalExpenses %></td>
                 <td style="border-top: 4px solid black;">....</td>
@@ -72,17 +77,19 @@
             <% if(c.name === "Savings") { %>
             <tr class="savings">
                 <td><%= c.name %></td>
-                <td>$....</td>
-                <td>$<%= c.amount %></td>
+                <td><%= c.note %></td>
+                <td>$<%= c.budgetAmt %></td>
+                <td>$<%= c.actualAmt %></td>  
                 <td>____%</td>
             </tr>
         <% }}) %>
             <% category.forEach(function(c) { %>
                     <% if(c.name === "Savings") { %>
-                        <% totalSavings += c.amount; %>
+                        <% totalSavings += c.actualAmt; %>
                         <% }}) %>
             <tr class="total">
                 <td style="border-top: 4px solid black;">TOTAL SAVINGS</td>
+                <td style="border-top: 4px solid black;"></td>
                 <td style="border-top: 4px solid black;">$....</td>
                 <td style="border-top: 4px solid black;">$<%= totalSavings %></td>
                 <td style="border-top: 4px solid black;">....</td>
@@ -98,16 +105,14 @@
         <tr></tr>
         <tr></tr>
             <% let balance = (totalIncome - totalExpenses - totalSavings) %>
-            <% let color = balance >= 0 ? "rgb(86, 167, 86)" : "red"; %>
+            <% let color = balance >= 0 ? "rgb(86, 167, 86)" : "tomato"; %>
             <tr>
                 <td style="border-top: 4px solid black;">BUDGET SURPLUS/(DEFICIT)</td>
+                <td style="border-top: 4px solid black;"></td>
                 <td style="border-top: 4px solid black;">$....</td>
                 <td style="border-top: 4px solid black; color: <%=color%>"> $<%= balance %> </td>
                 <td style="border-top: 4px solid black;">....</td>
             </tr>
-    
-    
-    
     </tbody>
 </table>
 

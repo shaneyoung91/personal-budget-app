@@ -3,10 +3,10 @@
 <h3><%= category.name %></h3>
 <form action="/budgets/<%= budgetId %>/categories/<%= category._id %>?_method=PUT" method="POST">
     <label>Transaction Date:
-        <input type="date" name="date" value="<%= category.date.toISOString().split('T')[0] %>">
+        <input type="date" name="date" value="<%= category.date %>">
     </label><br><br>
-    <label>Amount:
-        <input data-type="currency" name="amount" value="<%=category.amount%>">
+    <label>Actual Amount:
+        <input data-type="currency" name="actualAmt" value="<%=category.actualAmt%>">
     </label><br><br>
     <label>Notes:
         <input name="note" value="<%=category.note %>">
