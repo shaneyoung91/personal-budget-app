@@ -20,7 +20,7 @@
         <% categories.forEach(function(c) { %>
             <tr>
               <td><%= c.name %></td>
-              <td><%= c.date.toDateString() %></td>
+              <td><%= c.date.toISOString().split('T')[0] %></td>
               <td>$<%= c.amount %></td>
               <td><%= c.note %></td>
               <td>

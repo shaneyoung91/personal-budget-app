@@ -3,15 +3,19 @@
 <h3><%= category.name %></h3>
 <form action="/budgets/<%= budgetId %>/categories/<%= category._id %>?_method=PUT" method="POST">
     <label>Transaction Date:
-        <input type="date" name="date" value="<%= category.date%>">
+        <input type="date" name="date" value="<%= category.date.toISOString().split('T')[0] %>">
     </label><br><br>
     <label>Amount:
-        <input data-type="currency" name="amount" placeholder="$0">
+        <input data-type="currency" name="amount" placeholder="<%=category.amount%>">
     </label><br><br>
     <label>Notes:
-        <input name="note">
+        <input name="note" placeholder="<%=category.note %>">
     </label><br><br>
     <button type="submit">Update</button>
+</form>
+<br><br>
+<form action="/budgets/<%= budgetId %>/categories/" method="GET">
+    <button type="submit">Return to Categories</button>
 </form>
 
 <%- include('../partials/footer') %>

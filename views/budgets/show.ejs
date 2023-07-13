@@ -10,11 +10,6 @@
         <th>Actual Amount</th>
         <th>% of Income</th>
     </tr>
-    <tr></tr>
-    <tr></tr>
-    <tr></tr>
-    <tr></tr>
-    <tr></tr>
     </thead>
     <tbody>
         <% category.forEach(function(c) { %>
@@ -30,10 +25,10 @@
             <% let totalExpenses = 0 %>
             <% let totalSavings = 0 %>
             <% category.forEach(function(c) { %>
-            <tr class="total">
                 <% if(c.name === "Income") { %>
                     <% totalIncome += c.amount; %>
                     <% }}) %>
+            <tr class="total">
                 <td style="border-top: 4px solid black;">TOTAL INCOME</td>
                 <td style="border-top: 4px solid black;">$....</td>
                 <td style="border-top: 4px solid black;">$<%= totalIncome %></td>
@@ -47,8 +42,8 @@
             <tr></tr>
             <tr></tr>
         <% category.forEach(function(c) { %>
-            <tr class="expenses">
             <% if(c.name !== "Income" & c.name !== "Savings") { %>
+            <tr class="expenses">    
                 <td><%= c.name %></td>
                 <td>$....</td> 
                 <td>$<%= c.amount %></td>   
@@ -56,36 +51,42 @@
             </tr>
             <% }}) %>
             <% category.forEach(function(c) { %>
-                <tr class="total">
                     <% if(c.name !== "Income" & c.name !== "Savings") { %>
                         <% totalExpenses += c.amount; %>
                         <% }}) %>
-                    <td style="border-top: 4px solid black;">TOTAL EXPENSES</td>
-                    <td style="border-top: 4px solid black;">$....</td>
-                    <td style="border-top: 4px solid black;">$<%= totalExpenses %></td>
-                    <td style="border-top: 4px solid black;">....</td>
+            <tr class="total">
+                <td style="border-top: 4px solid black;">TOTAL EXPENSES</td>
+                <td style="border-top: 4px solid black;">$....</td>
+                <td style="border-top: 4px solid black;">$<%= totalExpenses %></td>
+                <td style="border-top: 4px solid black;">....</td>
             </tr>
         <tr></tr>
         <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
         <% category.forEach(function(c) { %>
-            <tr class="savings">
             <% if(c.name === "Savings") { %>
+            <tr class="savings">
                 <td><%= c.name %></td>
                 <td>$....</td>
                 <td>$<%= c.amount %></td>
                 <td>____%</td>
             </tr>
-            <% }}) %>
+        <% }}) %>
             <% category.forEach(function(c) { %>
-                <tr class="total">
                     <% if(c.name === "Savings") { %>
                         <% totalSavings += c.amount; %>
                         <% }}) %>
+            <tr class="total">
                 <td style="border-top: 4px solid black;">TOTAL SAVINGS</td>
                 <td style="border-top: 4px solid black;">$....</td>
                 <td style="border-top: 4px solid black;">$<%= totalSavings %></td>
                 <td style="border-top: 4px solid black;">....</td>
-        </tr>
+            </tr>
         <tr></tr>
         <tr></tr>
         <tr></tr>
