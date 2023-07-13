@@ -1,7 +1,31 @@
 <%- include('../partials/header') %>
-<nav>
-    <a href="/budgets/<%= budget._id %>/categories" method="GET">Categories</a>
-</nav>
 
+<h3><%=budget.month%> <%=budget.year%> Budget</h3>
+<br>
+<table>
+    <thead>
+    <tr>
+        <th>Category</th>
+        <th></th>
+        <th>Amount</th>
+        <th></th>
+        <th>% of Income</th>
+    </tr>
+    </thead>
+    <tbody>
+        <% category.forEach(function(c) { %>
+            <tr>
+                <td><%= c.name%></td>
+                <td></td>
+                <td><%= c.amount %></td>
+                <td></td>
+                <td>____%</td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+
+<br><br>
+<a href="/budgets/<%= budget._id %>/categories" method="GET">Review / Add Categories</a>
 
 <%- include('../partials/footer') %>
