@@ -106,8 +106,8 @@
         <tr></tr>
         <tr></tr>
         <tr></tr>
-            <% let actualBalance = (totalIncome - totalExpenses - totalSavings) %>
-            <% let budgetBalance = (totalBudgetIncome - totalBudgetExpenses - totalBudgetSavings) %>
+            <% let actualBalance = (totalIncome - totalExpenses - totalSavings).toFixed(2) %>
+            <% let budgetBalance = (totalBudgetIncome - totalBudgetExpenses - totalBudgetSavings).toFixed(2) %>
             <tr class="total">
                 <td style="border-top: 4px solid black;">BUDGET SURPLUS/(DEFICIT)</td>
                 <td style="border-top: 4px solid black;"></td>
