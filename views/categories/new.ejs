@@ -32,6 +32,9 @@
     <button type="submit">Add Category</button>
 </form>
 <p><%= errorMsg %></p>
-
+<br><br>
+<form action="/budgets/<%= budgetId %>/categories" method="GET">
+    <button type="submit">Return to Categories</button>
+</form>
 
 <%- include('../partials/footer') %>

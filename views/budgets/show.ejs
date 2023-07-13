@@ -90,6 +90,24 @@
         <tr></tr>
         <tr></tr>
         <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+            <% let balance = (totalIncome - totalExpenses - totalSavings) %>
+            <% let color = balance >= 0 ? "rgb(86, 167, 86)" : "red"; %>
+            <tr>
+                <td style="border-top: 4px solid black;">BUDGET SURPLUS/(DEFICIT)</td>
+                <td style="border-top: 4px solid black;">$....</td>
+                <td style="border-top: 4px solid black; color: <%=color%>"> $<%= balance %> </td>
+                <td style="border-top: 4px solid black;">....</td>
+            </tr>
+    
+    
+    
     </tbody>
 </table>
 

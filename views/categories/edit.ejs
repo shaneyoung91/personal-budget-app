@@ -6,16 +6,12 @@
         <input type="date" name="date" value="<%= category.date.toISOString().split('T')[0] %>">
     </label><br><br>
     <label>Amount:
-        <input data-type="currency" name="amount" placeholder="<%=category.amount%>">
+        <input data-type="currency" name="amount" value="<%=category.amount%>">
     </label><br><br>
     <label>Notes:
-        <input name="note" placeholder="<%=category.note %>">
+        <input name="note" value="<%=category.note %>">
     </label><br><br>
     <button type="submit">Update</button>
-</form>
-<br><br>
-<form action="/budgets/<%= budgetId %>/categories/" method="GET">
-    <button type="submit">Return to Categories</button>
 </form>
 
 <%- include('../partials/footer') %>
