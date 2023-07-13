@@ -4,10 +4,11 @@
 <form action="/budgets/<%=budgetId%>/categories" method="POST">
     <label>Name/Item:
         <select name="name">
-            <option value="Income" class="positive-cash">Income</option>
+            <option value="Income">Income</option>
             <option value="Rent/Mortgage" class="expense">Rent/Mortgage</option>
             <option value="Utilities" class="expense">Utilities</option>
             <option value="Groceries" class="expense">Groceries</option>
+            <option value="Eating Out/Restaurants" class="expense">Eating Out/Restaurants</option>
             <option value="Transportation/Gas" class="expense">Transportation/Gas</option>
             <option value="Phone" class="expense">Phone</option>
             <option value="Streaming Services" class="expense">Streaming Services</option>
@@ -16,7 +17,7 @@
             <option value="Car Loan" class="expense">Car Loan</option>
             <option value="Credit Card" class="expense">Credit Card</option>
             <option value="Other" class="expense">Other</option>
-            <option value="Savings" class="positive-cash">Savings</option>
+            <option value="Savings" class="savings">Savings</option>
         </select>
     </label><br><br>
     <label>Transaction Date:

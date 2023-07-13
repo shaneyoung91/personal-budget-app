@@ -24,7 +24,6 @@ nav {
 table {
   table-layout: fixed;
   width: 100%;
-  border-collapse: collapse;
   border: 3px solid black;
 }
 
@@ -42,4 +41,32 @@ button {
 
 select {
   font-size: 16px;
+}
+
+thead {
+  background-color: whitesmoke;
+  line-height: 30px;
+}
+
+tbody {
+  background-color: bisque;
+  line-height: 28px;
+  text-align: center;
+}
+
+.income {
+  background-color: rgb(86, 167, 86);
+}
+
+.total {
+  background-color: #575775;
+  color: white;
+}
+
+.expenses {
+  background-color: rgb(240, 178, 178);
+}
+
+.savings {
+  background-color: rgb(215, 121, 230);
 }

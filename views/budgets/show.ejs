@@ -1,33 +1,79 @@
 <%- include('../partials/header') %>
 
-<h3><%=budget.month%> <%=budget.year%> Budget</h3>
+<h2 align="center"><%=budget.month%> <%=budget.year%> Budget</h2>
 <br>
 <table>
     <thead>
     <tr>
         <th>Category</th>
-        <th></th>
-        <th>Amount</th>
-        <th></th>
+        <th>Expected Amount</th>
+        <th>Actual Amount</th>
         <th>% of Income</th>
     </tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
     </thead>
     <tbody>
         <% category.forEach(function(c) { %>
-            <tr>
+            <tr class="income">
             <% if(c.name === "Income") { %>
-                <td style="color: rgb(65, 192, 65)"><%= c.name %></td>
-                <td></td>   
-                <td style="color: rgb(65, 192, 65)"><%= c.amount %></td>   
-                <% } else { %>
-                <td style="color: red"><%= c.name%></td>
-                <td></td>
-                <td style="color: red"><%= c.amount %></td>
-                <% } %>
-                <td></td>
+                <td><%= c.name %></td>
+                <td>$....</td> 
+                <td>$<%= c.amount %></td>   
                 <td>____%</td>
             </tr>
-        <% }) %>
+            <% }}) %>
+            <tr class="total">
+            <td style="border-top: 4px solid black;">TOTAL INCOME</td>
+            <td style="border-top: 4px solid black;">$....</td>
+            <td style="border-top: 4px solid black;">$....</td>
+            <td style="border-top: 4px solid black;">....</td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+        <% category.forEach(function(c) { %>
+            <tr class="expenses">
+            <% if(c.name !== "Income" & c.name !== "Savings") { %>
+                <td><%= c.name %></td>
+                <td>$....</td> 
+                <td>$<%= c.amount %></td>   
+                <td>____%</td>
+            </tr>
+            <% }}) %>
+            <tr class="total">
+                <td style="border-top: 4px solid black;">TOTAL EXPENSES</td>
+                <td style="border-top: 4px solid black;">$....</td>
+                <td style="border-top: 4px solid black;">$....</td>
+                <td style="border-top: 4px solid black;">....</td>
+            </tr>
+        <tr></tr>
+        <tr></tr>
+        <% category.forEach(function(c) { %>
+            <tr class="savings">
+            <% if(c.name === "Savings") { %>
+                <td><%= c.name %></td>
+                <td>$....</td>
+                <td>$<%= c.amount %></td>
+                <td>____%</td>
+            </tr>
+            <% }}) %>
+            <tr class="total">
+            <td style="border-top: 4px solid black;">TOTAL SAVINGS</td>
+            <td style="border-top: 4px solid black;">$....</td>
+            <td style="border-top: 4px solid black;">$....</td>
+            <td style="border-top: 4px solid black;">....</td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
     </tbody>
 </table>
 
