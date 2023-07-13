@@ -12,8 +12,10 @@ module.exports = {
 
 async function update(req, res) {
     try {
-        await Category.updateOne({_id: req.params.id}, req.body);
-        res.redirect('/categories');
+        const budgetId = req.params.id
+        const budget = await Budget.findById(budgetId)
+        const category = await Category.updateOne({_id: req.params.id}, req.body);
+        res.redirect(`/budgets/${budgetId}/categories`);
     } catch (err) {
         console.log(err)
     }
@@ -21,8 +23,10 @@ async function update(req, res) {
 
 async function edit(req, res) {
     try {
+        const budgetId = req.params.id
+        const budget = await Budget.findById(budgetId)
         const category = await Category.findById(req.params.id);
-        res.render('categories/edit', {title: 'My Money, My Problems', category})
+        res.render('categories/edit', {title: 'My Money, My Problems', category, budgetId})
     } catch (err) {
         console.log(err)
     }
@@ -30,8 +34,10 @@ async function edit(req, res) {
 
 async function deleteCategory(req, res) {
     try {
+        const budgetId = req.params.id
+        const budget = await Budget.findById(budgetId)
         const category = await Category.findByIdAndDelete(req.params.id);
-        res.redirect('/categories')
+        res.redirect(`/budgets/${budgetId}/categories`)
     } catch(err) {
         console.log(err)
     }

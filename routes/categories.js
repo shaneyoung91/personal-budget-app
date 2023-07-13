@@ -10,15 +10,15 @@ router.get('/budgets/:id/categories', categoriesCtrl.index);
 router.get('/budgets/:id/categories/new', ensureLoggedIn, categoriesCtrl.new);
 
 // DELETE /categories/:id
-router.delete('/categories/:id', ensureLoggedIn, categoriesCtrl.delete)
+router.delete('/budgets/:id/categories/:id', ensureLoggedIn, categoriesCtrl.delete)
 
 // PUT /categories/:id
-router.put('/categories/:id', ensureLoggedIn, categoriesCtrl.update)
+router.put('/budgets/:id/categories/:id', ensureLoggedIn, categoriesCtrl.update)
 
 // POST /categories
 router.post('/budgets/:id/categories', ensureLoggedIn, categoriesCtrl.create);
 
 // GET /categories/:id/edit
-router.get('/categories/:id/edit', ensureLoggedIn, categoriesCtrl.edit)
+router.get('/budgets/:id/categories/:id/edit', ensureLoggedIn, categoriesCtrl.edit)
 
 module.exports = router;

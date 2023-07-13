@@ -24,12 +24,12 @@
               <td>$<%= c.amount %></td>
               <td><%= c.note %></td>
               <td>
-                <form action="/categories/<%= c._id %>/edit" method="GET">
+                <form action="/budgets/<%= budgetId %>/categories/<%= c._id %>/edit" method="GET">
                   <button type="submit"><img src="https://pixsector.com/cache/c5433603/av741f3e5fd1c88304cf8.png"></button>
                 </form>
               </td>
               <td>
-                <form action="/categories/<%= c._id%>?_method=DELETE" method="POST">
+                <form action="/budgets/<%= budgetId %>/categories/<%= c._id%>?_method=DELETE" method="POST">
                   <button type="submit"><img src="https://www.iconpacks.net/icons/1/free-trash-icon-347-thumb.png"></button>
                 </form>
               </td>
