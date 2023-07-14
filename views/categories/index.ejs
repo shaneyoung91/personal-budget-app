@@ -1,14 +1,6 @@
 <%- include('../partials/header') %>
 
-<h3>All Categories</h3>
-<form action="/budgets/<%= budgetId %>/categories/new" method="GET">
-  <button type="submit">Add New Category</button>
-</form>
-<br>
-<form action="/budgets/<%= budgetId %>" method="GET">
-  <button type="submit">Return to Budget</button>
-</form>
-<br>
+<h2>All Categories</h2>
 <table id="categories-table">
     <thead>
       <tr>
@@ -43,5 +35,13 @@
           <% }) %>
         </tbody>
       </table>
-
+      <br><br>
+      <form action="/budgets/<%= budgetId %>/categories/new" method="GET">
+        <button type="submit">Add New Category</button>
+      </form>
+      <br>
+      <form action="/budgets/<%= budgetId %>" method="GET">
+        <button type="submit">Return to Budget</button>
+      </form>
+      <br>
 <%- include('../partials/footer') %>
