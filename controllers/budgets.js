@@ -39,6 +39,7 @@ async function newBudget(req, res) {
 }
 
 async function index(req, res) {
-    const budgets = await Budget.find({})
-    res.render('budgets/index', {title: 'My Money, My Problems', budgets})
+    const loggedInUserId = req.user.id;
+    const userBudgets = await Budget.find({user: loggedInUserId})
+    res.render('budgets/index', {title: 'My Money, My Problems', budgets: userBudgets })
 }

@@ -11,6 +11,8 @@
     <nav align="center">
       <a class="active" href="/" <%- title === 'Home' ? 'class="active"' : '' %>>Home</a>
       &nbsp;
+      <a class="active" href="/about" <%- title === 'About' ? 'class="active"' : '' %>>About</a>
+      &nbsp;
     <% if (user) { %>
       <a href="/budgets"  <%- title === 'Budgets' ? 'class="active"' : '' %>>Budgets</a>
       &nbsp;
