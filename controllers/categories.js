@@ -64,6 +64,6 @@ async function newCategory(req, res) {
 async function index(req, res) {
     const budgetId = req.params.id
     const budget = await Budget.findById(budgetId)
-    const categories = await Category.find({}).sort({date: 1});
+    const categories = await Category.find({budget: budgetId}).sort({date: 1});
     res.render('categories/index', {title: 'My Money, My Problems', categories, budgetId: budgetId})
 }

@@ -7,7 +7,7 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <title><%= title %></title>
   </head>
-  <body>
+  <header>
     <nav align="center">
       <a class="active" href="/" <%- title === 'Home' ? 'class="active"' : '' %>>Home</a>
       &nbsp;
@@ -18,7 +18,9 @@
       &nbsp;
     </nav>
     <% } else { %>
-      <a href="/auth/google" id="login"><img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"></a>
+      <a href="/auth/google" id="login">Log In<img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"></a>
     <% } %>
+  </header>
+  <body>
     <h1 align="center"><%= title %></h1>
     <br>
