@@ -13,7 +13,7 @@ module.exports = {
 async function show(req, res) {
     try {
         const budget = await Budget.findById(req.params.id)
-        const category = await Category.find({})
+        const category = await Category.find({budget: budget._id})
         res.render('budgets/show', {title: 'My Money, My Problems', budget: budget, category})
     } catch(err) {
         console.log(err)
