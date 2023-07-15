@@ -1,8 +1,11 @@
 <%- include('../partials/header') %>
 
+<br>
 <h2>All Categories</h2>
-<table id="categories-table">
-    <thead>
+<br>
+<div class="container">
+<table id="categories-table" class="table">
+    <thead align="center">
       <tr>
         <th>Name</th>
         <th>Date</th>
@@ -23,12 +26,12 @@
               <td><%= c.note %></td>
               <td>
                 <form action="/budgets/<%= budgetId %>/categories/<%= c._id %>/edit" method="GET">
-                  <button type="submit"><img src="https://pixsector.com/cache/c5433603/av741f3e5fd1c88304cf8.png"></button>
+                  <button type="submit"><img src="https://pixsector.com/cache/c5433603/av741f3e5fd1c88304cf8.png" height="30" width="30"></button>
                 </form>
               </td>
               <td>
                 <form action="/budgets/<%= budgetId %>/categories/<%= c._id%>?_method=DELETE" method="POST">
-                  <button type="submit"><img src="https://www.iconpacks.net/icons/1/free-trash-icon-347-thumb.png"></button>
+                  <button type="submit"><img src="https://www.iconpacks.net/icons/1/free-trash-icon-347-thumb.png" height="30" width="30"></button>
                 </form>
               </td>
             </tr>
@@ -44,4 +47,5 @@
         <button type="submit">Return to Budget</button>
       </form>
       <br>
+  </div>
 <%- include('../partials/footer') %>

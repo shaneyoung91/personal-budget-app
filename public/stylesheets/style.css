@@ -3,23 +3,6 @@ body {
   font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
-}
-
-#login img {
-  height: 50px;
-  width: 50px;
-}
-
-img {
-  height: 28px;
-  width: 28px;
-}
-
-nav {
-  font-size: 18px;
-}
 
 table {
   table-layout: fixed;

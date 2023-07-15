@@ -1,8 +1,8 @@
 <%- include('../partials/header') %>
-
-<h3>My Budgets</h3>
-
+<br>
+<h2>My Budgets</h2>
     <ul>
+      <br>
       <% budgets.forEach(function(b) { %>
         <li>
           <td><a href="/budgets/<%= b._id %>"><%= b.month %> <%= b.year %></td>
