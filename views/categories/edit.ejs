@@ -1,6 +1,8 @@
 <%- include('../partials/header') %>
 
+<br>
 <h3><%= category.name %></h3>
+<br>
 <form action="/budgets/<%= budgetId %>/categories/<%= category._id %>?_method=PUT" method="POST">
     <label>Transaction Date:
         <input type="date" name="date" value="<%= category.date %>">
@@ -12,7 +14,7 @@
         <input data-type="currency" name="actualAmt" value="<%=category.actualAmt%>">
     </label><br><br>
     <label>Notes:
-        <input style="width: 35%" name="note" value="<%=category.note %>">
+        <input name="note" value="<%=category.note %>">
     </label><br><br>
     <button type="submit">Update</button>
 </form>

@@ -14,11 +14,11 @@ const categorySchema = new Schema({
     },
     budgetAmt: {
         type: Number,
-        required: true
+        required: true,
     },
     actualAmt: {
         type: Number,
-        required: true
+        required: true,
     },
     note: {
         type: String,

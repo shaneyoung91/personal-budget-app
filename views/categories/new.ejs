@@ -1,6 +1,8 @@
 <%- include('../partials/header') %>
 
+<br>
 <h3>Enter a New Category</h3>
+<br>
 <form action="/budgets/<%=budgetId%>/categories" method="POST">
     <label>Name/Item:
         <select name="name">
@@ -25,18 +27,19 @@
         <input type="date" name="date">
     </label><br><br>
     <label>Budgeted Amount:
-        <input data-type="currency" name="budgetAmt" placeholder="$0">
+        <input data-type="currency" name="budgetAmt" placeholder="Enter Amount - $0" required>
     </label><br><br>
     <label>Actual Amount:
-        <input data-type="currency" name="actualAmt" placeholder="$0">
+        <input data-type="currency" name="actualAmt" placeholder="Enter Amount - $0" required>
     </label><br><br>
     <label>Notes:
-        <input style="width: 35%;" name="note" placeholder="REQUIRED - Please enter a brief note or description of the transaction">
+        <input name="note" placeholder="Brief Note/Description" required>
     </label><br><br>
     <button type="submit">Add Category</button>
 </form>
+<br>
 <p><%= errorMsg %></p>
-<br><br>
+<br>
 <form action="/budgets/<%= budgetId %>/categories" method="GET">
     <button type="submit">Return to Categories</button>
 </form>

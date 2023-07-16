@@ -51,7 +51,7 @@ async function create(req, res) {
         const category = await Category.create(req.body)
         res.redirect(`/budgets/${budgetId}/categories`)
     } catch (err) {
-        res.render('categories/new', {title: 'My Money, My Problems', errorMsg: err.message})
+        res.render('categories/new', {title: 'My Money, My Problems', errorMsg: err.message, budgetId})
     }
 }
 
