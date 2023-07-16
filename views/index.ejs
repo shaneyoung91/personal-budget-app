@@ -5,7 +5,12 @@
 </div>
 <br><br>
 <% if (user) { %>
-<h3 align="center">Welcome <%=user.name%>!</h3>
+    <h2 align="center">Welcome  <%=user.name%>!</h2>
+<% } else { %>
+    <h2 align="center"><u>My Money, My Problems</u></h2>
+    <br>
+    <p align="center">Budgeting is a fundamental skill of personal finance.</p>
+    <p align="center">Let's get <u><b>YOU</b></u> on track to financial success and freedom!</p>
 <% } %>
 
 <%- include('./partials/footer') %>
