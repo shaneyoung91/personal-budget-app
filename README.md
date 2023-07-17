@@ -9,8 +9,8 @@
 By understanding their challenges and frustrations, we aim to serve individuals from various age groups and backgrounds who are motivated to improve their financial well-being. Whether they are recent college graduates, young professionals, parents, or individuals nearing retirement, our app caters to a wide range of users who are seeking a trusted and user-friendly platform to enhance their financial literacy and achieve their financial goals.
 
 ---
-## Link to App :link:
 
+## Link to App :link:
 [My Money, My Problems](https://my-money-my-problems-adc02cdb74c3.herokuapp.com/)
 
 ---
