@@ -1,11 +1,8 @@
-# :moneybag: My Money, My Problems - A Personal Finance Budget App :moneybag:
+# My Money, My Problems - A Personal Finance Budget App :moneybag:
 
----
-
-## About
 **Brand Statement**: Empowering individuals to take control of their finances and achieve their financial goals.
 
-**Mission**: Our mission is to provide a comprehensive and user-friendly budgeting app that simplifies the process of tracking and managing finances, enabling individuals to gain financial control, make informed decisions, and achieve their short- and long-term financial goals.
+**Mission**: Our mission is to provide a comprehensive and user-friendly budgeting app that simplifies the process of tracking and managing finances.
 
 **Target Market**: Our target market consists of individuals who need financial guidance and feel overwhelmed by the plethora of existing personal finance sources and websites. These individuals may be struggling with budgeting, organizing their expenses, or understanding complex financial concepts. They seek a solution that offers simplicity, accessibility, and personalized support to help them gain confidence in managing their finances effectively.
 
@@ -13,16 +10,16 @@ By understanding their challenges and frustrations, we aim to serve individuals 
 
 ---
 
-## Link to Web App :link:
+## Link to App :link:
 [My Money, My Problems](https://my-money-my-problems-adc02cdb74c3.herokuapp.com/)
 
 ---
 
-## Home Page
+## Home Page 
 ![home page](public/images/index.png)
 ---
 ## Signed In
- - After signing up or logging in with their Google account, users can then access their budgets (which only they can see).
+ - After signing up or logging in with their Google account, Users can then access their budgets.
 ![sign in page](public/images/index-sign-in.png)
 ---
 ## Budget Overview
@@ -36,10 +33,10 @@ By understanding their challenges and frustrations, we aim to serve individuals 
  ![Express Badge](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
  ![Node.js Badge](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
  <br>
- ![HTML Badge](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
- ![CSS Badge](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
  ![JavaScript Badge](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+ ![CSS Badge](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
  ![Bootstrap Badge](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+ ![Nodemon Badge](https://img.shields.io/badge/NODEMON-%23323330.svg?style=for-the-badge&logo=nodemon&logoColor=%BBDEAD)
  <br>
  ![Heroku Badge](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
  ![Trello Badge](https://img.shields.io/badge/Trello-0052CC?style=for-the-badge&logo=trello&logoColor=white)
