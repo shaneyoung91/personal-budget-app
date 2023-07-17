@@ -1,4 +1,4 @@
-# My Money, My Problems - A Personal Finance Budget App :moneybag:
+# My Money, My Problems :moneybag:
 
 **Brand Statement**: Empowering individuals to take control of their finances and achieve their financial goals.
 

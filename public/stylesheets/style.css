@@ -2,11 +2,13 @@ body {
   padding: 50px;
   font-family: 'Faustina', serif;
   font-size: 20px;
+
 }
 
 .body-font, header{
   font-family: 'Faustina', serif;
   font-size: 20px;
+  background-color: rgb(246, 237, 226);
 }
 
 th {

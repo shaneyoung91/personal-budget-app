@@ -18,5 +18,8 @@
     </label><br><br>
     <button type="submit">Update</button>
 </form>
-
+<br>
+<form action="/budgets/<%= budgetId %>/categories" method="GET">
+    <button type="submit">Return to Categories</button>
+</form>
 <%- include('../partials/footer') %>

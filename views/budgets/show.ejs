@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 <br>
-<h2 align="center"><%=budget.month%> <%=budget.year%> Budget</h2>
+<h2 align="center"><u><%=budget.month%> <%=budget.year%> Budget</u></h2>
 <br>
 <table class="table">
     <thead align="center" class="table">
@@ -38,16 +38,16 @@
             <% if(c.name === "Income") { %>
                 <td><%= c.name %></td>
                 <td><%= c.note %></td>
-                <td>$<%= c.budgetAmt %></td>
-                <td>$<%= c.actualAmt %></td>  
+                <td>$<%= c.budgetAmt.toFixed(2) %></td>
+                <td>$<%= c.actualAmt.toFixed(2) %></td>  
                 <td><%= ((c.actualAmt / totalIncome) * 100).toFixed(1) %>%</td>
             </tr>
             <% }}) %>
-            <tr class="total">
+            <tr class="total table">
                 <td style="border-top: 4px solid black;">TOTAL INCOME</td>
                 <td style="border-top: 4px solid black;"></td>
-                <td style="border-top: 4px solid black;">$<%= totalBudgetIncome %></td>
-                <td style="border-top: 4px solid black;">$<%= totalIncome %></td>
+                <td style="border-top: 4px solid black;">$<%= totalBudgetIncome.toFixed(2) %></td>
+                <td style="border-top: 4px solid black;">$<%= totalIncome.toFixed(2) %></td>
                 <td style="border-top: 4px solid black;"><%= ((totalIncome/totalIncome) * 100).toFixed(1) %>%</td>
             </tr>
             <tr></tr>
@@ -58,16 +58,16 @@
             <tr class="table-danger">    
                 <td><%= c.name %></td>
                 <td><%= c.note %></td>
-                <td>$<%= c.budgetAmt %></td>
-                <td>$<%= c.actualAmt %></td>  
+                <td>$<%= c.budgetAmt.toFixed(2) %></td>
+                <td>$<%= c.actualAmt.toFixed(2) %></td>  
                 <td><%= ((c.actualAmt / totalIncome) * 100).toFixed(1) %>%</td>
             </tr>
             <% }}) %>
             <tr class="total table">
                 <td style="border-top: 4px solid black;">TOTAL EXPENSES</td>
                 <td style="border-top: 4px solid black;"></td>
-                <td style="border-top: 4px solid black;">$<%= totalBudgetExpenses %></td>
-                <td style="border-top: 4px solid black;">$<%= totalExpenses %></td>
+                <td style="border-top: 4px solid black;">$<%= totalBudgetExpenses.toFixed(2) %></td>
+                <td style="border-top: 4px solid black;">$<%= totalExpenses.toFixed(2) %></td>
                 <td style="border-top: 4px solid black;"><%= ((totalExpenses/totalIncome) * 100).toFixed(1) %>%</td>
             </tr>
         <tr></tr>
@@ -83,16 +83,16 @@
             <tr class="table-primary">
                 <td><%= c.name %></td>
                 <td><%= c.note %></td>
-                <td>$<%= c.budgetAmt %></td>
-                <td>$<%= c.actualAmt %></td>  
+                <td>$<%= c.budgetAmt.toFixed(2) %></td>
+                <td>$<%= c.actualAmt.toFixed(2) %></td>  
                 <td><%= ((c.actualAmt / totalIncome) * 100).toFixed(1) %>%</td>
             </tr>
         <% }}) %>
             <tr class="total table">
                 <td style="border-top: 4px solid black;">TOTAL SAVINGS</td>
                 <td style="border-top: 4px solid black;"></td>
-                <td style="border-top: 4px solid black;">$<%= totalBudgetSavings %></td>
-                <td style="border-top: 4px solid black;">$<%= totalSavings %></td>
+                <td style="border-top: 4px solid black;">$<%= totalBudgetSavings.toFixed(2) %></td>
+                <td style="border-top: 4px solid black;">$<%= totalSavings.toFixed(2) %></td>
                 <td style="border-top: 4px solid black;"><%= ((totalSavings/totalIncome) * 100).toFixed(1) %>%</td>
             </tr>
         <tr></tr>
@@ -108,15 +108,17 @@
             <% let actualBalance = (totalIncome - totalExpenses - totalSavings).toFixed(2) %>
             <% let budgetBalance = (totalBudgetIncome - totalBudgetExpenses - totalBudgetSavings).toFixed(2) %>
             <tr class="total table">
-                <td style="border-top: 4px solid black;">BUDGET SURPLUS/(DEFICIT)</td>
+                <td style="border-top: 4px solid black;"><em>BUDGET SURPLUS/(DEFICIT)</em></td>
                 <td style="border-top: 4px solid black;"></td>
-                <td style="border-top: 4px solid black;"> $<%= budgetBalance %> </td>
-                <td style="border-top: 4px solid black;"> $<%= actualBalance %> </td>
+                <td style="border-top: 4px solid black;"><em> $<%= budgetBalance %></em></td>
+                <td style="border-top: 4px solid black;"><em> $<%= actualBalance %></em></td>
                 <td style="border-top: 4px solid black;"></td>
             </tr>
     </tbody>
 </table>
-<br><br>
-<a href="/budgets/<%= budget._id %>/categories" method="GET">Review / Add Categories</a>
+<br>
+<form action="/budgets/<%= budget._id %>/categories" method="GET">
+    <button type="submit">Review / Update Categories</button>
+</form>
 
 <%- include('../partials/footer') %>

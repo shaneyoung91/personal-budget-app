@@ -27,10 +27,10 @@
         <input type="date" name="date">
     </label><br><br>
     <label>Budgeted Amount:
-        <input data-type="currency" name="budgetAmt" placeholder="Enter Amount - $0" required>
+        <input data-type="currency" name="budgetAmt" placeholder="Enter Amount - $0.00" required>
     </label><br><br>
     <label>Actual Amount:
-        <input data-type="currency" name="actualAmt" placeholder="Enter Amount - $0" required>
+        <input data-type="currency" name="actualAmt" placeholder="Enter Amount - $0.00" required>
     </label><br><br>
     <label>Notes:
         <input name="note" placeholder="Brief Note/Description" required>
@@ -39,7 +39,6 @@
 </form>
 <br>
 <p><%= errorMsg %></p>
-<br>
 <form action="/budgets/<%= budgetId %>/categories" method="GET">
     <button type="submit">Return to Categories</button>
 </form>

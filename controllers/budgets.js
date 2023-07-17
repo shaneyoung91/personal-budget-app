@@ -2,7 +2,6 @@ const Budget = require('../models/budget');
 const Category = require('../models/category');
 const User = require('../models/user');
 
-
 module.exports = {
     index,
     new: newBudget,
@@ -19,7 +18,6 @@ async function show(req, res) {
         console.log(err)
     }
 }
-
 
 async function create(req, res) {
     try {

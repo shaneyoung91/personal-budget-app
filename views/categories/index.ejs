@@ -21,8 +21,8 @@
             <tr>
               <td><%= c.name %></td>
               <td><%= c.date %></td>
-              <td>$<%= c.budgetAmt %></td>
-              <td>$<%= c.actualAmt %></td>
+              <td>$<%= c.budgetAmt.toFixed(2) %></td>
+              <td>$<%= c.actualAmt.toFixed(2) %></td>
               <td><%= c.note %></td>
               <td>
                 <form action="/budgets/<%= budgetId %>/categories/<%= c._id %>/edit" method="GET">
