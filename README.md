@@ -7,14 +7,10 @@
 **Target Market**: Our target market consists of individuals who need financial guidance and feel overwhelmed by the plethora of existing personal finance sources and websites. These individuals may be struggling with budgeting, organizing their expenses, or understanding complex financial concepts. They seek a solution that offers simplicity, accessibility, and personalized support to help them gain confidence in managing their finances effectively.
 
 By understanding their challenges and frustrations, we aim to serve individuals from various age groups and backgrounds who are motivated to improve their financial well-being. Whether they are recent college graduates, young professionals, parents, or individuals nearing retirement, our app caters to a wide range of users who are seeking a trusted and user-friendly platform to enhance their financial literacy and achieve their financial goals.
-
 ---
-
 ## Link to App :link:
 [My Money, My Problems](https://my-money-my-problems-adc02cdb74c3.herokuapp.com/)
-
 ---
-
 ## Home Page 
 ![home page](public/images/index.png)
 ---
@@ -27,6 +23,31 @@ By understanding their challenges and frustrations, we aim to serve individuals 
 ---
 ## Categories Overview
 ![categories index page](public/images/categories-index.png)
+---
+## Code Preview
+```js
+<% category.forEach(function(c) { %>
+   <% if(c.name === "Income") { %>
+      <tr class="table-success">
+         <td><%= c.name %></td>
+         <td><%= c.note %></td>
+         <td>$<%= c.budgetAmt.toFixed(2) %></td>
+         <td>$<%= c.actualAmt.toFixed(2) %></td>  
+         <td><%= ((c.actualAmt / totalIncome) * 100).toFixed(1) %>%</td>
+      </tr>
+      <% }}) %>
+
+<% category.forEach(function(c) { %>
+   <% if(c.name !== "Income" & c.name !== "Savings") { %>
+      <tr class="table-danger">    
+         <td><%= c.name %></td>
+         <td><%= c.note %></td>
+         <td>$<%= c.budgetAmt.toFixed(2) %></td>
+         <td>$<%= c.actualAmt.toFixed(2) %></td>  
+         <td><%= ((c.actualAmt / totalIncome) * 100).toFixed(1) %>%</td>
+      </tr>
+      <% }}) %>
+```
 ---
 ## Technologies Used
  ![MongoDB Badge](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
@@ -41,8 +62,8 @@ By understanding their challenges and frustrations, we aim to serve individuals 
  ![Heroku Badge](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
  ![Trello Badge](https://img.shields.io/badge/Trello-0052CC?style=for-the-badge&logo=trello&logoColor=white)
  ![Google Cloud Badge](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
----
 
+---
 ## Future Enhancements
    - [ ] Full CRUD operation for different types of budgets
    - [ ] Implement Finance APIs that links the User's banking and investment accounts to their profile

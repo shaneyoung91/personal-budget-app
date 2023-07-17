@@ -34,8 +34,8 @@
         }) %>
 
         <% category.forEach(function(c) { %>
-            <tr class="table-success">
             <% if(c.name === "Income") { %>
+            <tr class="table-success">
                 <td><%= c.name %></td>
                 <td><%= c.note %></td>
                 <td>$<%= c.budgetAmt.toFixed(2) %></td>
@@ -55,7 +55,7 @@
             <tr></tr>
         <% category.forEach(function(c) { %>
             <% if(c.name !== "Income" & c.name !== "Savings") { %>
-            <tr class="table-danger">    
+            <tr class="table-danger">   
                 <td><%= c.name %></td>
                 <td><%= c.note %></td>
                 <td>$<%= c.budgetAmt.toFixed(2) %></td>
