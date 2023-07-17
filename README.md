@@ -10,6 +10,7 @@ By understanding their challenges and frustrations, we aim to serve individuals 
 
 ---
 ## Link to App :link:
+
 [My Money, My Problems](https://my-money-my-problems-adc02cdb74c3.herokuapp.com/)
 
 ---
