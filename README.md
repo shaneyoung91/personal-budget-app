@@ -1,4 +1,4 @@
-# :money: My Money, My Problems - A Personal Finance Budget App :money:
+# :moneybag: My Money, My Problems - A Personal Finance Budget App :moneybag:
 
 ---
 
@@ -8,23 +8,27 @@
 ---
 
 ## About
-Personal Finance
+Brand Statement
+Purpose of App
+Target Market
+
 
 ---
 ## Home Page
-![home page](images/index.png)
+![home page](public/images/images/index.png)
 ---
 ---
 ## Signed In
-![sign in page](images/index-sign-in.png)
+ - After signing up (or logging in), users will now have access to their budgets (which only they can see).
+![sign in page](public/images/index-sign-in.png)
 ---
 ---
 ## Budget Overview
-![budget show page](images/budgets-show.png)
+![budget show page](public/images/budgets-show.png)
 ---
 ---
 ## Categories Overview
-![categories index page](images/categories-index.png)
+![categories index page](public/images/categories-index.png)
 ---
 ---
 ## Technologies Used
@@ -44,5 +48,5 @@ Personal Finance
    - [ ] Full CRUD operation for different types of budgets
    - [ ] Implement Finance APIs that links the User's banking and investment accounts to their profile
    - [ ] Convert budgets to different currency values
-   - Refer to Trello for all other enhancements: [Trello](https://trello.com/b/NApXZZXE/budget-app-men-full-stack-crud)
+   - [ ] Refer to Trello for all other enhancements: [Trello](https://trello.com/b/NApXZZXE/budget-app-men-full-stack-crud)
 ---
