@@ -8,18 +8,17 @@
 ---
 
 ## About
-Brand Statement
-Purpose of App
-Target Market
-
+- Brand Statement
+- Purpose of App
+- Target Market
 
 ---
 ## Home Page
-![home page](public/images/images/index.png)
+![home page](public/images/index.png)
 ---
 ---
 ## Signed In
- - After signing up (or logging in), users will now have access to their budgets (which only they can see).
+ - After signing up or logging in with their Google account, users can then access their budgets (which only they can see).
 ![sign in page](public/images/index-sign-in.png)
 ---
 ---
