@@ -1,4 +1,4 @@
-# My Money, My Problems :moneybag:
+# Zero-Based Budgeting App :moneybag:
 
 **Brand Statement**: Empowering individuals to take control of their finances and achieve their financial goals.
 
